@@ -1,3 +1,6 @@
+from aiogram.client.default import DefaultBotProperties
+from aiogram.enums import ParseMode
+
 import asyncio
 import logging
 
@@ -17,9 +20,16 @@ async def main() -> None:
     )
 
     bot = Bot(
+<<<<<<< Updated upstream
         token=settings.telegram_bot_token,
         default=DefaultBotProperties(parse_mode=ParseMode.HTML),
     )
+=======
+    token=settings.telegram_bot_token,
+    default=DefaultBotProperties(parse_mode=ParseMode.HTML)
+    )
+
+>>>>>>> Stashed changes
     dp = Dispatcher()
     dp.include_router(start_router)
     dp.include_router(admin_router)
